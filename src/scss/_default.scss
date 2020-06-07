@@ -1,0 +1,85 @@
+// animations
+
+$default-transition: .3s ease-in-out;
+
+@keyframes mouseAnimation {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(10px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+}
+
+// colors
+
+$main-green: #2ED47D;
+$main-blue: #1292EE;
+$main-violet: #DEA1FF;
+$main-pink: #FF539D;
+$main-yellow: #F7C74C;
+$main-orange: #FD8469;
+
+// extend
+
+%default-button {
+  display: inline-block;
+  padding: 14px 36px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 15px;
+  border: 2px solid #000;
+  border-radius: 3px;
+  transition: $default-transition;
+}
+
+// default
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1190px;
+  padding: 0 10px;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 32px;
+  color: #071E57;
+}
+
+h3 {
+  font-size: 20px;
+  color: $main-blue;
+  font-weight: normal;
+}
+
+p {
+  font-size: 18px;
+  line-height: 29px;
+  color: #748494;
+}
+
+img {
+  transition: $default-transition;
+}
+
+video {
+  transition: $default-transition;
+}

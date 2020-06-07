@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homepage | Eugene Vinokurov</title>
+</head>
+<body>
+  <div class="preloader">
+    <h1 class="preloader__title">Pick your language</h1>
+    <div class="preloader__links">
+      <a href="#" class="preloader__links-item">English</a>
+      <a href="./ru" class="preloader__links-item">Russian</a>
+    </div>
+  </div>
+  <div class="animatedMan">
+    <div class="animatedMan__alert">A little man in a bear costume is hiding on this site. I just can't catch him. Catch it and I will give you a 15% discount on the entire range of my services! <span></span></div>
+    <div class="animatedMan__model"></div>
+    <div class="animatedMan__text">
+      <h2 class="animatedMan__text-title">Wow... you made it!</h2>
+      <p>Well, you coped with this task, but most importantly, you showed that you can read. Yes, in the 21st century, not many people can really read. First, when communicating, you agree on one thing, but the output is completely different. You have proven to yourself and to me that you know how to pay attention to details. I already like you and I already know that we will work together perfectly. And now, when we are done with this, I will go to lock this little tomboy in a cage, and you can continue to scroll my site. Good luck!</p>
+      <span></span>
+    </div>
+  </div>
+  <header class="header">
+    <picture class="header__circle">
+      <source data-src="<%=require('../img/header-circle-big.webp')%>" type="image/webp">
+      <img data-src="<%=require('../img/header-circle-big.png')%>" alt="header circle">
+    </picture>
+    <div class="header__menu">
+      <div class="container">
+        <a href="#">
+          <img data-src="<%=require('../img/logo.svg')%>" alt="logo" class="header__menu-logo"></img>
+        </a>
+        <div class="header__menu-burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <nav class="header__menu-navigation">
+          <ul>
+            <li><a class="menu-navigation_active" href="#">Homepage</a></li>
+            <li><a href="#">About Me</a></li>
+            <li><a href="#">Notes</a></li>
+            <li><a href="#">Сontract</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="container">
+      <div class="header__content">
+        <h1 class="header__content-title">You need a website?</h1>
+        <p class="header__content-description">I can help you with the creation and maintenance of existing projects.
+        </p>
+        <div class="header__content-buttons">
+          <a href="#contact" class="content-buttons__item">Contact me</a>
+          <a href="#skills" class="content-buttons__item">My skills list</a>
+        </div>
+      </div>
+    </div>
+    <img src="<%=require('../img/header-mouse.svg')%>" alt="header mouse" class="header__mouse">
+  </header>
+  <main>
+    <div id="skills" class="skills">
+      <div class="container">
+        <h2 class="skills__title">I am always tuned for the result</h2>
+        <p class="skills__description">First, I want to talk about what I usually use when I work with a project.</p>
+        <div class="skills__tabs">
+          <div class="skills__tabs-item">
+            <img data-src="<%=require('../img/skills-tabs/tab-1.svg')%>" alt="tab item">
+            <h3 class="tabs-item__heading">HTML5</h3>
+            <p class="tabs-item__description">Hypertext Markup Language is the standard markup language for documents
+              designed to be displayed in a web browser.</p>
+            <a target="_blank" href="https://en.wikipedia.org/wiki/HTML" class="tabs-item__button">Learn more</a>
+          </div>
+          <div class="skills__tabs-item">
+            <img data-src="<%=require('../img/skills-tabs/tab-2.svg')%>" alt="tab item">
+            <h3 class="tabs-item__heading">CSS3</h3>
+            <p class="tabs-item__description">Cascading Style Sheets is a style sheet language used for describing the
+              presentation of a document written in a markup language like HTML.</p>
+            <a target="_blank" href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets"
+              class="tabs-item__button">Learn more</a>
+          </div>
+          <div class="skills__tabs-item">
+            <img data-src="<%=require('../img/skills-tabs/tab-3.svg')%>" alt="tab item">
+            <h3 class="tabs-item__heading">JavaScript (ES6+)</h3>
+            <p class="tabs-item__description">JavaScript, often abbreviated as JS, is a programming language that
+              conforms to the ECMAScript specification.</p>
+            <a target="_blank" href="https://en.wikipedia.org/wiki/JavaScript" class="tabs-item__button">Learn more</a>
+          </div>
+          <div class="skills__tabs-item">
+            <img data-src="<%=require('../img/skills-tabs/tab-4.svg')%>" alt="tab item">
+            <h3 class="tabs-item__heading">Bootstrap</h3>
+            <p class="tabs-item__description">Bootstrap is a free and open-source CSS framework directed at responsive,
+              mobile-first front-end web development.</p>
+            <a target="_blank" href="https://getbootstrap.com/" class="tabs-item__button">Learn more</a>
+          </div>
+          <div class="skills__tabs-item">
+            <img data-src="<%=require('../img/skills-tabs/tab-5.svg')%>" alt="tab item">
+            <h3 class="tabs-item__heading">Webpack</h3>
+            <p class="tabs-item__description">Webpack is an open-source JavaScript module bundler. It is made primarily
+              for JavaScript, but it can transform front-end assets like HTML, CSS, and images if the corresponding
+              loaders are included.</p>
+            <a target="_blank" href="https://webpack.js.org/" class="tabs-item__button">Learn more</a>
+          </div>
+          <div class="skills__tabs-item">
+            <img data-src="<%=require('../img/skills-tabs/tab-6.svg')%>" alt="tab item">
+            <h3 class="tabs-item__heading">SASS / SCSS</h3>
+            <p class="tabs-item__description">Sass is a style sheet language initially designed by Hampton Catlin and
+              developed by Natalie Weizenbaum.</p>
+            <a target="_blank" href="https://sass-lang.com/" class="tabs-item__button">Learn more</a>
+          </div>
+        </div>
+        <a href="https://en.wikipedia.org/wiki/Web_development" target="_blank" class="skills__button">Web development</a>
+      </div>
+    </div>
+    <div class="counters">
+      <div class="container">
+        <div class="counters__content">
+          <h3 class="counters__content-suptitle">About my work experience </h3>
+          <h2 class="counters__content-title">I work with small and medium businesses</h2>
+          <p class="counters__content-description">
+            I have completed a significant number of orders for the development of individual projects from sites of small provincial coffee houses to prototyping interfaces for large game projects. And I no longer consider the amount of work whose purpose was to fix small (and not so) bugs already on existing sites. I am sure that I can find an individual approach to your project!
+            <span>I am always open to suggestions</span>
+          </p>
+          <a href="#" class="counters__content-button">About me</a>
+        </div>
+        <div class="counters__illustration">
+          <div class="counters__illustration-item">
+            <div class="illustration-item__text">20+<span>Projects</span></div>
+          </div>
+          <div class="counters__illustration-item">
+            <div class="illustration-item__text">1.000+<span>Hours</span></div>
+          </div>
+          <div class="counters__illustration-item">
+            <div class="illustration-item__text">100+<span>Cups of tea</span></div>
+          </div>
+          <div class="counters__illustration-item">
+            <div class="illustration-item__text">-5.5<span>Vision</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="about">
+      <div class="container">
+        <div class="about__image">
+          <picture class="about__image-item about__image-item_active">
+            <source data-src="<%=require('../img/about/about_image_1.webp')%>" type="image/webp">
+            <img data-src="<%=require('../img/about/about_image_1.jpg')%>" alt="about image">
+          </picture>
+          <picture class="about__image-item">
+            <source data-src="<%=require('../img/about/about_image_2.webp')%>" type="image/webp">
+            <img data-src="<%=require('../img/about/about_image_2.jpg')%>" alt="about image">
+          </picture>
+          <picture class="about__image-item">
+            <source data-src="<%=require('../img/about/about_image_3.webp')%>" type="image/webp">
+            <img data-src="<%=require('../img/about/about_image_3.jpg')%>" alt="about image">
+          </picture>
+        </div>
+        <div class="about__content">
+          <div class="about__content-item content-item_active">
+            <div class="content-item__heading">Creating Responsive Sites<span></span></div>
+            <div class="content-item__description">I create truly responsive sites that will look equally good both on the desktop PC and on all existing mobile devices. You can check it right now - try accessing this site from a mobile device, laptop, or if you have already logged into them, then from the desktop. From any device, this site will look great!</div>
+          </div>
+          <div class="about__content-item">
+            <div class="content-item__heading">Creating a smart UI<span></span></div>
+            <div class="content-item__description">I love to pay attention to details and if you expect from your site not just the content part in the font Timés Nev Roman, then you have come to the address! Beautiful pop-ups, interesting buttons and much more - all this is about me. I'm just in love with the animation and ready to share this love with you!</div>
+          </div>
+          <div class="about__content-item">
+            <div class="content-item__heading">High Google PageSpeed<span></span></div>
+            <div class="content-item__description">High results in the Google ranking table and a valid site code - this is exactly what primarily affects the position of the site in the search results. I write a valid and clean code that will appeal not only to the person who will work with him after me, but also to the search engine!</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="portfolio">
+      <div class="container">
+        <h3 class="portfolio__suptitle">Portfolio</h3>
+        <h2 class="portfolio__title">I love my job and this is important <img src="<%=require('../img/portfolio/portfolio-heart.svg')%>" alt=""></h2>
+        <p class="portfolio__description">I want to show you a couple of my works so that you can finally give an assessment to my skills and understand what I'm capable of.</p>
+      </div>
+      <div class="portfolio__carousel">
+        <div class="portfolio__carousel-cards">
+          <div class="carousel-cards__item">
+            <a target="_blank" href="https://evolve-rp.ru/">
+              <video autoplay loop muted data-src="<%=require('../img/portfolio/portfolio-1.mp4')%>"></video>
+              <div class="cards__item-description">Website development for a game server for GTA: Samp RP</div>
+            </a>
+          </div>
+          <div class="carousel-cards__item">
+            <a target="_blank" href="https://cafevernisage.ru/">
+              <video autoplay loop muted data-src="<%=require('../img/portfolio/portfolio-2.mp4')%>"></video>
+              <div class="cards__item-description">Website for Cafe Vernissage in the Volga region</div>
+            </a>
+          </div>
+          <div class="carousel-cards__item">
+            <a target="_blank" href="#">
+              <video autoplay loop muted data-src="<%=require('../img/portfolio/portfolio-3.mp4')%>"></video>
+              <div class="cards__item-description">Prototype Collection for Frontend Development</div>
+            </a>
+          </div>
+        </div>
+        <div class="portfolio__carousel-dots">
+          <div class="carousel-dots__item"></div>
+          <div class="carousel-dots__item carousel-dots__item_active"></div>
+          <div class="carousel-dots__item"></div>
+        </div>
+      </div>
+    </div>
+    <div class="prices">
+      <div class="container">
+        <h2 class="prices__title">Pricing built for businesses of all sizes</h2>
+        <p class="prices__description">I accept payment at the current dollar rate. Why? Because of its versatility, a person from anywhere in the world will <span>quickly be able to translate</span> it into local currency</p>
+        <div class="prices__cards">
+          <div class="prices__cards-item">
+            <div class="cards-item__suptitle">Easy start</div>
+            <div class="cards-item__price">$59</div>
+            <ul class="cards-item__list">
+              <li class="list-item_active">Landing page / five-six screens and simple content management system</li>
+              <li>Integration with Wordpress</li>
+              <li>Strong animations and live-effects</li>
+              <li>Help with everything regarding the site installation</li>
+            </ul>
+            <a href="#" class="cards-item__button">Order</a>
+          </div>
+          <div class="prices__cards-item">
+            <div class="cards-item__suptitle">Mid project</div>
+            <div class="cards-item__price">$140</div>
+            <ul class="cards-item__list">
+              <li class="list-item_active">Landing page / five-six screens and simple content management system</li>
+              <li class="list-item_active">Integration with Wordpress</li>
+              <li class="list-item_active">Strong animations and live-effects</li>
+              <li>Help with everything regarding the site installation</li>
+            </ul>
+            <a href="#" class="cards-item__button">Order</a>
+          </div>
+          <div class="prices__cards-item">
+            <div class="cards-item__suptitle">Final team</div>
+            <div class="cards-item__price">$340</div>
+            <ul class="cards-item__list">
+              <li class="list-item_active">Landing page / five-six screens and simple content management system</li>
+              <li class="list-item_active">Integration with Wordpress</li>
+              <li class="list-item_active">Strong animations and live-effects</li>
+              <li class="list-item_active">Help with everything regarding the site installation</li>
+            </ul>
+            <a href="#" class="cards-item__button">Order</a>
+          </div>
+        </div>
+        <a href="#" style="visibility: hidden;" class="prices__convert">Convert into rubles</a>
+      </div>
+    </div>
+    <div class="offer">
+      <div class="offer__content container">
+        <h2 class="offer__content-title">You can view my portfolio simply by clicking the button below.</h2>
+        <a target="_blank" href="<%=require('../img/CV.pdf')%>" class="offer__content-button">Download</a>
+      </div>
+    </div>
+  </main>
+  <footer id="contact" class="feedback">
+    <div class="container">
+      <h3 class="feedback__suptitle">Looking for me?</h3>
+      <h2 class="feedback__title">Let's discuss your case and how can we help you</h2>
+      <p class="feedback__description">Would you like to know additional information that is not on the site or already wanted to work with me? I am in all popular social networks - write to me and we will definitely agree!</p>
+      <div class="feedback__socials">
+        <div class="feedback__socials-telegram">
+          <img data-src="<%=require('../img/feedback/feedback-telegram.svg')%>" alt="telegram">
+          <div class="feedback__socials-text">+7 (930) 283-06-84</div>
+        </div>
+        <div class="feedback__socials-whatsapp">
+          <img data-src="<%=require('../img/feedback/feedback-whatsapp.svg')%>" alt="whatsapp">
+          <div class="feedback__socials-text">+7 (930) 283-06-84</div>
+        </div>
+        <div class="feedback__socials-mail">
+          <img data-src="<%=require('../img/feedback/feedback-mail.svg')%>" alt="email">
+          <div class="feedback__socials-text">eugene.vinokuroff@gmail.com</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

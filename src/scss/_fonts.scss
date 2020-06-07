@@ -1,0 +1,41 @@
+// all fonts
+
+@font-face {
+  font-family: "Muli";
+  font-weight: normal;
+  src: url('../fonts/Muli-Regular.ttf');
+}
+
+@font-face {
+  font-family: "Muli";
+  font-weight: medium;
+  src: url('../fonts/Muli-Medium.ttf');
+}
+
+@font-face {
+  font-family: "Muli";
+  font-weight: bold;
+  src: url('../fonts/Muli-Bold.ttf');
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: normal;
+  src: url('../fonts/Roboto-Regular.ttf');
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: medium;
+  src: url('../fonts/Roboto-Regular.ttf');
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: bold;
+  src: url('../fonts/Roboto-Bold.ttf');
+}
+
+body {
+  font-family: "Muli", "Roboto", "Arial", sans-serif;
+}

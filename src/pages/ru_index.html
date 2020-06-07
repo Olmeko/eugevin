@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Домашняя | Евгений Винокуров</title>
+</head>
+<body>
+  <div class="preloader">
+    <h1 class="preloader__title">Pick your language</h1>
+    <div class="preloader__links">
+      <a href="#" class="preloader__links-item">English</a>
+      <a href="./ru" class="preloader__links-item">Russian</a>
+    </div>
+  </div>
+  <div class="animatedMan">
+    <div class="animatedMan__alert">Маленький человек в костюме медведя прячется на этом сайте. Я просто не могу его поймать. Если сможешь словить его я дам тебе скидку 15% на весь спектр моих услуг!<span></span></div>
+    <div class="animatedMan__model"></div>
+    <div class="animatedMan__text">
+      <h2 class="animatedMan__text-title">Оу... у тебя получилось!</h2>
+      <p>Ну, ты справился с этой задачей, но это не самое главное. Ты только что доказал, что умеешь читать. Да, в 21 веке не так много людей обладают данным навыком. Порой, на этапе переговоров ты общаешься и соглашаешься с одним решением, а потом резко передумываешь и осознаешь, что ты что-то не так понял. Ты доказал себе и мне, что обращаешь внимание на детали. Ты мне уже нравишься и я уже знаю, что мы отлично сработаемся. И теперь, когда мы закончили с этим, я пойду запру этого маленького сорванца в клетке, а ты можешь продолжать скроллить мой сайт. Удачи!</p>
+      <span></span>
+    </div>
+  </div>
+  <header class="header">
+    <picture class="header__circle">
+      <source data-src="<%=require('../img/header-circle-big.webp')%>" type="image/webp">
+      <img data-src="<%=require('../img/header-circle-big.png')%>" alt="header circle">
+    </picture>
+    <div class="header__menu">
+      <div class="container">
+        <a href="#">
+          <img data-src="<%=require('../img/logo.svg')%>" alt="logo" class="header__menu-logo"></img>
+        </a>
+        <div class="header__menu-burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <nav class="header__menu-navigation">
+          <ul>
+            <li><a class="menu-navigation_active" href="#">Домашняя</a></li>
+            <li><a href="#">Обо мне</a></li>
+            <li><a href="#">Заметки</a></li>
+            <li><a href="#">Контракт</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="container">
+      <div class="header__content">
+        <h1 class="header__content-title">Тебе нужен вебсайт?</h1>
+        <p class="header__content-description">Я могу помочь тебе в создании или же поддержке уже существующих проектов.</p>
+        <div class="header__content-buttons">
+          <a href="#contact" class="content-buttons__item">Связаться</a>
+          <a href="#skills" class="content-buttons__item">Мои скиллзы</a>
+        </div>
+      </div>
+    </div>
+    <img src="<%=require('../img/header-mouse.svg')%>" alt="header mouse" class="header__mouse">
+  </header>
+  <main>
+    <div id="skills" class="skills">
+      <div class="container">
+        <h2 class="skills__title">Я всегда настроен на результат</h2>
+        <p class="skills__description">Во-первых, я хочу рассказать о том, что я обычно использую, когда работаю с проектом.</p>
+        <div class="skills__tabs">
+          <div class="skills__tabs-item">
+            <img data-src="<%=require('../img/skills-tabs/tab-1.svg')%>" alt="tab item">
+            <h3 class="tabs-item__heading">HTML5</h3>
+            <p class="tabs-item__description">Язык разметки гипертекста - это стандартный язык разметки для документов, предназначенных для отображения в веб-браузере.</p>
+            <a target="_blank" href="https://en.wikipedia.org/wiki/HTML" class="tabs-item__button">Подробнее</a>
+          </div>
+          <div class="skills__tabs-item">
+            <img data-src="<%=require('../img/skills-tabs/tab-2.svg')%>" alt="tab item">
+            <h3 class="tabs-item__heading">CSS3</h3>
+            <p class="tabs-item__description">Каскадные таблицы стилей - это язык таблиц стилей, используемый для описания представления документа, написанного на языке разметки, например HTML.</p>
+            <a target="_blank" href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets"
+              class="tabs-item__button">Подробнее</a>
+          </div>
+          <div class="skills__tabs-item">
+            <img data-src="<%=require('../img/skills-tabs/tab-3.svg')%>" alt="tab item">
+            <h3 class="tabs-item__heading">JavaScript (ES6+)</h3>
+            <p class="tabs-item__description">JavaScript, часто сокращенно обозначаемый как JS, является языком программирования, соответствующим спецификации ECMAScript.</p>
+            <a target="_blank" href="https://en.wikipedia.org/wiki/JavaScript" class="tabs-item__button">Подробнее</a>
+          </div>
+          <div class="skills__tabs-item">
+            <img data-src="<%=require('../img/skills-tabs/tab-4.svg')%>" alt="tab item">
+            <h3 class="tabs-item__heading">Bootstrap</h3>
+            <p class="tabs-item__description">Bootstrap - это бесплатная CSS-инфраструктура с открытым исходным кодом, ориентированная на адаптивную мобильную веб-разработку.</p>
+            <a target="_blank" href="https://getbootstrap.com/" class="tabs-item__button">Подробнее</a>
+          </div>
+          <div class="skills__tabs-item">
+            <img data-src="<%=require('../img/skills-tabs/tab-5.svg')%>" alt="tab item">
+            <h3 class="tabs-item__heading">Webpack</h3>
+            <p class="tabs-item__description">Webpack - это пакет модулей JavaScript с открытым исходным кодом. Он сделан в основном для JavaScript, но он может преобразовывать внешние ресурсы, такие как HTML, CSS и изображения, если включены соответствующие загрузчики.</p>
+            <a target="_blank" href="https://webpack.js.org/" class="tabs-item__button">Подробнее</a>
+          </div>
+          <div class="skills__tabs-item">
+            <img data-src="<%=require('../img/skills-tabs/tab-6.svg')%>" alt="tab item">
+            <h3 class="tabs-item__heading">SASS / SCSS</h3>
+            <p class="tabs-item__description">Sass - это язык таблиц стилей, изначально разработанный Hampton Catlin и разработанный Натали Вайзенбаум.</p>
+            <a target="_blank" href="https://sass-lang.com/" class="tabs-item__button">Подробнее</a>
+          </div>
+        </div>
+        <a target="_blank" href="https://ru.wikipedia.org/wiki/%D0%92%D0%B5%D0%B1-%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0" class="skills__button">Веб-разработка</a>
+      </div>
+    </div>
+    <div class="counters">
+      <div class="container">
+        <div class="counters__content">
+          <h3 class="counters__content-suptitle">О моем опыте работы</h3>
+          <h2 class="counters__content-title">Работаю с средним и малым бизнесом</h2>
+          <p class="counters__content-description">Я выполнил значительное количество заказов на разработку отдельных проектов от сайтов небольших провинциальных кофеен до прототипов интерфейсов для крупных игровых проектов. И я больше не рассматриваю объем работ, целью которых было исправление небольших (и не очень) ошибок уже на существующих сайтах. Я уверен, что смогу найти индивидуальный подход к вашему проекту!
+            <span>Я всегда открыт для предложений</span>
+          </p>
+          <a href="#" class="counters__content-button">Обо мне</a>
+        </div>
+        <div class="counters__illustration">
+          <div class="counters__illustration-item">
+            <div class="illustration-item__text">20+<span>Проектов</span></div>
+          </div>
+          <div class="counters__illustration-item">
+            <div class="illustration-item__text">1.000+<span>Часов</span></div>
+          </div>
+          <div class="counters__illustration-item">
+            <div class="illustration-item__text">100+<span>Чашек чая</span></div>
+          </div>
+          <div class="counters__illustration-item">
+            <div class="illustration-item__text">-5.5<span>Зрение</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="about">
+      <div class="container">
+        <div class="about__image">
+          <picture class="about__image-item about__image-item_active">
+            <source data-src="<%=require('../img/about/about_image_1.webp')%>" type="image/webp">
+            <img data-src="<%=require('../img/about/about_image_1.jpg')%>" alt="about image">
+          </picture>
+          <picture class="about__image-item">
+            <source data-src="<%=require('../img/about/about_image_2.webp')%>" type="image/webp">
+            <img data-src="<%=require('../img/about/about_image_2.jpg')%>" alt="about image">
+          </picture>
+          <picture class="about__image-item">
+            <source data-src="<%=require('../img/about/about_image_3.webp')%>" type="image/webp">
+            <img data-src="<%=require('../img/about/about_image_3.jpg')%>" alt="about image">
+          </picture>
+        </div>
+        <div class="about__content">
+          <div class="about__content-item content-item_active">
+            <div class="content-item__heading">Создание отзывчивых сайтов<span></span></div>
+            <div class="content-item__description">Я создаю действительно отзывчивые сайты, которые будут одинаково хорошо смотреться как на настольном ПК, так и на всех существующих мобильных устройствах. Вы можете проверить это прямо сейчас - с любого устройства этот сайт будет отлично выглядеть!</div>
+          </div>
+          <div class="about__content-item">
+            <div class="content-item__heading">Создание продуманного UI<span></span></div>
+            <div class="content-item__description">Я люблю обращать внимание на детали, и если вы ожидаете от своего сайта не только содержательной части шрифтом Times New Roman, то вы пришли по адресу! Красивые всплывающие окна, интересные кнопки и многое другое - все это обо мне. Я просто влюблен в анимацию и готов разделить эту любовь с вами!</div>
+          </div>
+          <div class="about__content-item">
+            <div class="content-item__heading">Высокий Google PageSpeed<span></span></div>
+            <div class="content-item__description">Высокие результаты в таблице рейтинга Google и валидный код сайта - это именно то, что первоочередно влияет на положение сайта в результатах поиска. Я пишу валидный и чистый код, который понравится не только человеку, который будет работать с ним после меня, но и поисковой системе!</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="portfolio">
+      <div class="container">
+        <h3 class="portfolio__suptitle">Портфолио</h3>
+        <h2 class="portfolio__title">Я люблю свою работу и это главное <img src="<%=require('../img/portfolio/portfolio-heart.svg')%>" alt=""></h2>
+        <p class="portfolio__description">Я хочу показать вам пару моих работ, чтобы вы наконец смогли оценить мои навыки и понять, на что я способен.</p>
+      </div>
+      <div class="portfolio__carousel">
+        <div class="portfolio__carousel-cards">
+          <div class="carousel-cards__item">
+            <a target="_blank" href="https://evolve-rp.ru/">
+              <video autoplay loop muted data-src="<%=require('../img/portfolio/portfolio-1.mp4')%>"></video>
+              <div class="cards__item-description">Разработка сайта для игрового сервера для GTA: Samp RP</div>
+            </a>
+          </div>
+          <div class="carousel-cards__item">
+            <a target="_blank" href="https://cafevernisage.ru/">
+              <video autoplay loop muted data-src="<%=require('../img/portfolio/portfolio-2.mp4')%>"></video>
+              <div class="cards__item-description">Сайт для кафе Вернисаж в Поволжье</div>
+            </a>
+          </div>
+          <div class="carousel-cards__item">
+            <a target="_blank" href="#">
+              <video autoplay loop muted data-src="<%=require('../img/portfolio/portfolio-3.mp4')%>"></video>
+              <div class="cards__item-description">Коллекция прототипов для Frontend разработки</div>
+            </a>
+          </div>
+        </div>
+        <div class="portfolio__carousel-dots">
+          <div class="carousel-dots__item"></div>
+          <div class="carousel-dots__item carousel-dots__item_active"></div>
+          <div class="carousel-dots__item"></div>
+        </div>
+      </div>
+    </div>
+    <div class="prices">
+      <div class="container">
+        <h2 class="prices__title">Ценообразование построено для проектов любых размеров</h2>
+        <p class="prices__description">Я принимаю оплату по текущему курсу доллара. Почему? Благодаря своей универсальности человек из любой точки мира <span>сможет быстро перевести его</span> в локальную валюту</p>
+        <div class="prices__cards">
+          <div class="prices__cards-item">
+            <div class="cards-item__suptitle">Легкий старт</div>
+            <div class="cards-item__price">$59</div>
+            <ul class="cards-item__list">
+              <li class="list-item_active">Landing page / пять-шесть экранов с простой системой управления контентом</li>
+              <li>Интеграция с CMS Wordpress</li>
+              <li>Сильные анимации и живые эффекты</li>
+              <li>Помощь со всем, что касается установки сайта</li>
+            </ul>
+            <a href="#" class="cards-item__button">Заказать</a>
+          </div>
+          <div class="prices__cards-item">
+            <div class="cards-item__suptitle">Средний проект</div>
+            <div class="cards-item__price">$140</div>
+            <ul class="cards-item__list">
+              <li class="list-item_active">Landing page / пять-шесть экранов с простой системой управления контентом</li>
+              <li class="list-item_active">Интеграция с CMS Wordpress</li>
+              <li class="list-item_active">Сильные анимации и живые эффекты</li>
+              <li>Помощь со всем, что касается установки сайта</li>
+            </ul>
+            <a href="#" class="cards-item__button">Заказать</a>
+          </div>
+          <div class="prices__cards-item">
+            <div class="cards-item__suptitle">Высокий уровень</div>
+            <div class="cards-item__price">$340</div>
+            <ul class="cards-item__list">
+              <li class="list-item_active">Landing page / пять-шесть экранов с простой системой управления контентом</li>
+              <li class="list-item_active">Интеграция с CMS Wordpress</li>
+              <li class="list-item_active">Сильные анимации и живые эффекты</li>
+              <li class="list-item_active">Помощь со всем, что касается установки сайта</li>
+            </ul>
+            <a href="#" class="cards-item__button">Заказать</a>
+          </div>
+        </div>
+        <a target="_blank" href="https://www.sberbank.ru/ru/quotes/currenciesfirst" class="prices__convert">Конвертировать в рубли</a>
+      </div>
+    </div>
+    <div class="offer">
+      <div class="offer__content container">
+        <h2 class="offer__content-title">Ты можешь просмотреть мое портфолио, просто нажав кнопку ниже.</h2>
+        <a target="_blank" href="<%=require('../img/CV.pdf')%>" class="offer__content-button">Скачать</a>
+      </div>
+    </div>
+  </main>
+  <footer id="contact" class="feedback">
+    <div class="container">
+      <h3 class="feedback__suptitle">Ищешь меня?</h3>
+      <h2 class="feedback__title">Давайте обсудим твой проект и как я могу тебе помочь</h2>
+      <p class="feedback__description">Хочешь узнать дополнительную информацию, которой нет на сайте или уже хочешь работать со мной? Я есть во всех популярных соцсетях - только напиши и мы обязательно договоримся!</p>
+      <div class="feedback__socials">
+        <div class="feedback__socials-telegram">
+          <img data-src="<%=require('../img/feedback/feedback-telegram.svg')%>" alt="telegram">
+          <div class="feedback__socials-text">+7 (930) 283-06-84</div>
+        </div>
+        <div class="feedback__socials-whatsapp">
+          <img data-src="<%=require('../img/feedback/feedback-whatsapp.svg')%>" alt="whatsapp">
+          <div class="feedback__socials-text">+7 (930) 283-06-84</div>
+        </div>
+        <div class="feedback__socials-mail">
+          <img data-src="<%=require('../img/feedback/feedback-mail.svg')%>" alt="email">
+          <div class="feedback__socials-text">eugene.vinokuroff@gmail.com</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

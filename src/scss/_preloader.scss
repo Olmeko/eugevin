@@ -1,0 +1,47 @@
+// preloader
+
+.preloader {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0.9;
+  animation: preloaderBgAnimation .5s ease;
+  transition: 1s ease;
+
+  .preloader__title {
+    color: #eee;
+  }
+
+  .preloader__links {
+    max-width: 400px;
+    width: 100%;
+    display: inherit;
+    justify-content: space-evenly;
+
+    .preloader__links-item {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #eee;
+      color: #000;
+
+      &:active {
+        box-shadow: inset 0 0 15px #000;
+      }
+    }
+  }
+}
+
+@keyframes preloaderBgAnimation {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
