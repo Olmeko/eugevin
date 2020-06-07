@@ -414,17 +414,25 @@
   }
 
   .counters__illustration {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 0;
+    flex-wrap: wrap;
     flex-basis: 55%;
     height: 670px;
     position: relative;
     right: -50px;
+
+    .counters__illustration-break {
+      flex-basis: 100%;
+    }
 
     .counters__illustration-item {
       display: flex;
       align-items: center;
       justify-content: center;
       z-index: 1;
-      position: absolute;
       height: 170px;
       width: 170px;
       border-radius: 50%;
@@ -443,31 +451,30 @@
       }
 
       &:first-child {
-        top: 10%;
-        left: 50%;
         color: #2ED47D;
-        transform: translateX(-50%);
-      }
-
-      &:nth-child(2) {
-        top: 50%;
-        right: 10%;
-        color: #F7C74C;
-        transform: translateY(-50%);
       }
 
       &:nth-child(3) {
-        bottom: 10%;
-        left: 50%;
-        color: #1292EE;
-        transform: translateX(-50%);
+        color: #F7C74C;
       }
 
       &:nth-child(4) {
-        top: 50%;
-        left: 10%;
+        height: 130px;
+        width: 130px;
+        overflow: hidden;
+
+        picture, img {
+          max-width: 100%;
+          max-height: 100%;
+        }
+      }
+
+      &:nth-child(5) {
+        color: #1292EE;
+      }
+
+      &:last-child {
         color: #FD8469;
-        transform: translateY(-50%);
       }
     }
 
@@ -573,6 +580,10 @@
         color: #748494;
         line-height: 29px;
         transition: $default-transition;
+
+        a {
+          color: $main-blue;
+        }
       }
 
       &.content-item_active {
@@ -913,6 +924,61 @@
       transform: scale(0.5);
       padding: 10px;
     }
+  }
+}
+
+// fuck IE
+
+.fuckie {
+  @extend %default-popup;
+
+  span {
+    padding: 10px;
+    position: inherit;
+    top: 10px;
+    right: 30px;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+
+    &:hover {
+
+      &::before {
+        transform: rotate(-45deg);
+      }
+
+      &::after {
+        transform: rotate(45deg);
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 25px;
+      height: 100%;
+      width: 2px;
+      background: #000;
+      transform: rotate(-90deg);
+      transition: 0.3s ease-in-out;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 25px;
+      height: 100%;
+      width: 2px;
+      background: #000;
+      transform: rotate(180deg);
+      transition: 0.3s ease-in-out;
+    }
+  }
+
+  ul li {
+    margin-top: 1rem;
   }
 }
 

@@ -1,3 +1,27 @@
+function preloaderAnimation() {
+  const preloader = document.querySelector('.preloader');
+  if (localStorage.getItem('preloader') !== 'false' && document.location.pathname !== '/ru') {
+    const body = document.querySelector('body');
+    const preloaderEnButton = document.querySelector('.preloader__links-item');
+
+    body.style.overflow = 'hidden';
+
+    preloaderEnButton.addEventListener('click', () => {
+      body.removeAttribute('style');
+
+      preloader.style.top = '-100%';
+      preloader.style.opacity = 0;
+
+      preloader.addEventListener('transitionend', function() {
+        preloader.remove();
+        localStorage.setItem('preloader', 'false');
+      });
+    });
+  } else {
+    preloader.remove();
+  }
+}
+
 function headerCircleMove(item, speed) {
   window.addEventListener('mousemove', (e) => {
     const headerVisible = item.getBoundingClientRect().bottom;
@@ -91,6 +115,23 @@ function burgerAnimation() {
   });
 }
 
+// === LAZY LOAD START === //
+
+function lazyStart() {
+  const firstImage = document.querySelector('img');
+  const firstImageSrc = firstImage.src;
+  firstImage.remove();
+  const allSource = document.querySelectorAll('source');
+  const allImg = document.querySelectorAll('img');
+
+  allSource.forEach(item => {
+    item.setAttribute('srcset', firstImageSrc);
+  });
+  allImg.forEach(item => {
+    item.setAttribute('src', firstImageSrc);
+  });
+}
+
 function lazyLoad() {
   const lazyItems = document.querySelectorAll('[data-src]');
 
@@ -100,7 +141,7 @@ function lazyLoad() {
     item.style.opacity = 0;
     item.style.transform = 'translateY(20px)';
     
-    if (itemPos < innerHeight / 1.2) {
+    if (itemPos < innerHeight) {
       if (item.hasAttribute('data-src')) {
         const itemSource = item.getAttribute('data-src');
 
@@ -126,6 +167,31 @@ function lazyLoad() {
 
   requestAnimationFrame(lazyLoad);
 }
+
+function lazyBreak() {
+  const firstImage = document.querySelector('img');
+
+  firstImage.style.display = 'none';
+
+  const allSource = document.querySelectorAll('source');
+  const allImg = document.querySelectorAll('img');
+
+  console.log(123);
+
+  for (let i = 0; i < allSource.length; i++) {
+    const sourceSrc = allSource[i].getAttribute('data-src');
+    allSource[i].setAttribute('srcset', sourceSrc);     
+  }
+
+  for (let i = 0; i < allImg.length; i++) {
+    const imgSrc = allImg[i].getAttribute('data-src');
+    allImg[i].setAttribute('src', imgSrc);
+  }
+}
+
+// === LAZY LOAD END === //
+
+// === ANIMATED MAN START === //
 
 function animatedMan() {
   const a = document.querySelectorAll('a');
@@ -192,4 +258,24 @@ function animatedMan() {
   }
 }
 
-export { headerCircleMove, adaptiveHeader, headerMouse, aboutSelect, burgerAnimation, lazyLoad, animatedMan };
+// === ANIMATED MAN END === //
+
+function fuckIE() {
+  const fuckIEButton = document.querySelector('.content-item__description a');
+  const fuckIETab = document.querySelector('.fuckie');
+  const fuckIESpan = document.querySelector('.fuckie span');
+
+  fuckIEButton.addEventListener('click', e => {
+    e.preventDefault();
+
+    fuckIETab.style.zIndex = 99;
+    fuckIETab.style.opacity = 1;
+    fuckIETab.style.transform = 'scale(1)';
+
+    fuckIESpan.addEventListener('click', () => {
+      fuckIETab.removeAttribute('style');
+    });
+  });
+}
+
+export { preloaderAnimation, headerCircleMove, adaptiveHeader, headerMouse, aboutSelect, burgerAnimation, lazyStart, lazyBreak, lazyLoad, animatedMan, fuckIE };

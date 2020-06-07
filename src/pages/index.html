@@ -5,22 +5,38 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Homepage | Eugene Vinokurov</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 </head>
 <body>
-  <div class="preloader">
-    <h1 class="preloader__title">Pick your language</h1>
-    <div class="preloader__links">
-      <a href="#" class="preloader__links-item">English</a>
-      <a href="./ru" class="preloader__links-item">Russian</a>
-    </div>
-  </div>
-  <div class="animatedMan">
-    <div class="animatedMan__alert">A little man in a bear costume is hiding on this site. I just can't catch him. Catch it and I will give you a 15% discount on the entire range of my services! <span></span></div>
-    <div class="animatedMan__model"></div>
-    <div class="animatedMan__text">
-      <h2 class="animatedMan__text-title">Wow... you made it!</h2>
-      <p>Well, you coped with this task, but most importantly, you showed that you can read. Yes, in the 21st century, not many people can really read. First, when communicating, you agree on one thing, but the output is completely different. You have proven to yourself and to me that you know how to pay attention to details. I already like you and I already know that we will work together perfectly. And now, when we are done with this, I will go to lock this little tomboy in a cage, and you can continue to scroll my site. Good luck!</p>
+  <img src="<%=require('../img/placeholder.jpg')%>" alt="">
+  <div class="live_events">
+    <div class="fuckie">
       <span></span>
+      <h1 class="fuckie__title">Why i don't support Internet Exlorer</h1>
+      <p class="fuckie__description">Gradually, Microsoft’s standard browser is being squeezed out by other market players such as Google or Microsoft themselves with their Edge Chromium. I'm not trying to make excuses, but just show you why I stopped supporting him a long time ago:</p>
+      <ul>
+        <li>Microsoft themselves are trying to destroy this ancient evil. It spoils sites, destroys markup, does not allow to use innovations</li>
+        <li>Internet Explorer is a crutch. And all the code that you first write for normal browsers (Edge, Chromium), then you will rewrite - and this is also a crutch</li>
+        <li>Internet Explorer remains in the hearts of users as a "pleasant memory." GS statistics show that less than 2% of Internet users worldwide use it</li>
+        <li>I pay a lot of attention to code for mobile devices, and therefore (since there is no IE on mobile devices) I do what I want and nothing will stop me</li>
+        <li>And in general. Animations? No, crutches. Popups? No, crutches. Performance? No, without crutches. Safety? Good luck with updating your IE6 databases once a thousand years, which certainly awaited IE8 and will wait for IE11. So why do all this?</li>
+      </ul>
+    </div>
+    <div class="preloader">
+      <h1 class="preloader__title">Pick your language</h1>
+      <div class="preloader__links">
+        <a href="#" class="preloader__links-item">English</a>
+        <span class="preloader__links-item">Russian (coming soon)</span>
+      </div>
+    </div>
+    <div class="animatedMan">
+      <div class="animatedMan__alert">A little man in a bear costume is hiding on this site. I just can't catch him. Catch it and I will give you a 15% discount on the entire range of my services! <span></span></div>
+      <div class="animatedMan__model"></div>
+      <div class="animatedMan__text">
+        <h2 class="animatedMan__text-title">Wow... you made it!</h2>
+        <p>Well, you coped with this task, but most importantly, you showed that you can read. Yes, in the 21st century, not many people can really read. First, when communicating, you agree on one thing, but the output is completely different. You have proven to yourself and to me that you know how to pay attention to details. I already like you and I already know that we will work together perfectly. And now, when we are done with this, I will go to lock this little tomboy in a cage, and you can continue to scroll my site. Good luck!</p>
+        <span></span>
+      </div>
     </div>
   </div>
   <header class="header">
@@ -31,7 +47,7 @@
     <div class="header__menu">
       <div class="container">
         <a href="#">
-          <img data-src="<%=require('../img/logo.svg')%>" alt="logo" class="header__menu-logo"></img>
+          <img data-src="<%=require('../img/logo.svg')%>" alt="logo" class="header__menu-logo">
         </a>
         <div class="header__menu-burger">
           <span></span>
@@ -59,7 +75,7 @@
         </div>
       </div>
     </div>
-    <img src="<%=require('../img/header-mouse.svg')%>" alt="header mouse" class="header__mouse">
+    <img data-src="<%=require('../img/header-mouse.svg')%>" alt="header mouse" class="header__mouse">
   </header>
   <main>
     <div id="skills" class="skills">
@@ -130,12 +146,20 @@
           <div class="counters__illustration-item">
             <div class="illustration-item__text">20+<span>Projects</span></div>
           </div>
+          <div class="counters__illustration-break"></div>
           <div class="counters__illustration-item">
             <div class="illustration-item__text">1.000+<span>Hours</span></div>
           </div>
           <div class="counters__illustration-item">
+            <picture>
+              <source data-src="<%=require('../img/photo.webp')%>" type="image/webp">
+              <img data-src="<%=require('../img/photo.jpg')%>" alt="photo">
+            </picture>
+          </div>
+          <div class="counters__illustration-item">
             <div class="illustration-item__text">100+<span>Cups of tea</span></div>
           </div>
+          <div class="counters__illustration-break"></div>
           <div class="counters__illustration-item">
             <div class="illustration-item__text">-5.5<span>Vision</span></div>
           </div>
@@ -164,8 +188,8 @@
             <div class="content-item__description">I create truly responsive sites that will look equally good both on the desktop PC and on all existing mobile devices. You can check it right now - try accessing this site from a mobile device, laptop, or if you have already logged into them, then from the desktop. From any device, this site will look great!</div>
           </div>
           <div class="about__content-item">
-            <div class="content-item__heading">Creating a smart UI<span></span></div>
-            <div class="content-item__description">I love to pay attention to details and if you expect from your site not just the content part in the font Timés Nev Roman, then you have come to the address! Beautiful pop-ups, interesting buttons and much more - all this is about me. I'm just in love with the animation and ready to share this love with you!</div>
+            <div class="content-item__heading">Full cross browsing<span></span></div>
+            <div class="content-item__description">All the sites that I made are completely cross-browser, which means that they look the same in all mass modern browsers and their versions. (With me you will definitely get accurate support for Chrome, Firefox, Safari and Edge Chromium). You can learn more about cross-browser compatibility <a href="">here</a>.</div>
           </div>
           <div class="about__content-item">
             <div class="content-item__heading">High Google PageSpeed<span></span></div>
@@ -177,7 +201,7 @@
     <div class="portfolio">
       <div class="container">
         <h3 class="portfolio__suptitle">Portfolio</h3>
-        <h2 class="portfolio__title">I love my job and this is important <img src="<%=require('../img/portfolio/portfolio-heart.svg')%>" alt=""></h2>
+        <h2 class="portfolio__title">I love my job and this is important <img data-src="<%=require('../img/portfolio/portfolio-heart.svg')%>" alt=""></h2>
         <p class="portfolio__description">I want to show you a couple of my works so that you can finally give an assessment to my skills and understand what I'm capable of.</p>
       </div>
       <div class="portfolio__carousel">

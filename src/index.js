@@ -5,44 +5,41 @@ import './scss/styles.scss';
 
 // imports
 
-import { headerCircleMove, adaptiveHeader, headerMouse, aboutSelect, burgerAnimation, lazyLoad, animatedMan, rubleConverter } from './js/main';
+import { preloaderAnimation, headerCircleMove, adaptiveHeader, headerMouse, aboutSelect, burgerAnimation, lazyStart, lazyBreak, lazyLoad, animatedMan, fuckIE } from './js/main';
 
 // callstack
 
-function preloaderAnimation() {
-  const preloader = document.querySelector('.preloader');
-  if (localStorage.getItem('preloader') !== 'false' && document.location.pathname !== '/ru') {
-    const body = document.querySelector('body');
-    const preloaderEnButton = document.querySelector('.preloader__links-item');
+if (!(window.ActiveXObject) && "ActiveXObject" in window) {
+  const liveEvents = document.querySelectorAll('.live_events >div');
 
-    body.style.overflow = 'hidden';
+  for (let i = 0; i < liveEvents.length; i++) {
+    liveEvents[i].style.display = 'none';
+  }
 
-    preloaderEnButton.addEventListener('click', () => {
-      body.removeAttribute('style');
+  lazyBreak();
+  
+} else {
 
-      preloader.style.top = '-100%';
-      preloader.style.opacity = 0;
+  // placeholderNormal
 
-      preloader.addEventListener('transitionend', function() {
-        preloader.remove();
-        localStorage.setItem('preloader', 'false');
-      });
-    });
-  } else {
-    preloader.remove();
+  lazyStart();
+
+  // preloader
+
+  preloaderAnimation();
+
+  // mainFunctions
+
+  window.onload = function() {
+    const headerCircle = document.querySelector('.header__circle');
+
+    headerCircleMove(headerCircle, 0.01);
+    adaptiveHeader();
+    headerMouse();
+    aboutSelect();
+    burgerAnimation();
+    lazyLoad();
+    animatedMan();
+    fuckIE();
   }
 }
-
-preloaderAnimation();
-
-window.addEventListener('DOMContentLoaded', () => {
-  const headerCircle = document.querySelector('.header__circle');
-
-  headerCircleMove(headerCircle, 0.01);
-  adaptiveHeader();
-  headerMouse();
-  aboutSelect();
-  burgerAnimation();
-  lazyLoad();
-  animatedMan();
-});

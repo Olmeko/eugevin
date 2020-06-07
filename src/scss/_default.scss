@@ -39,6 +39,25 @@ $main-orange: #FD8469;
   transition: $default-transition;
 }
 
+%default-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: #fff;
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 25%;
+  transform: scale(0);
+  opacity: 0;
+  z-index: -1;
+  transition: $default-transition;
+}
+
 // default
 
 * {
